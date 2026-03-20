@@ -100,6 +100,39 @@ Console.WriteLine($"The sum of the numbers entered is: {sum}");
 
 #region exercise 5 WorkSpace
 
+Console.WriteLine("Exercise 5");
+
+
+string[] names = new string[10];
+int index = 0;
+
+string answer;
+
+do
+{
+    Console.WriteLine("Please enter a name");
+
+    if (index < names.Length)
+    {
+        names[index] = Console.ReadLine();
+        index++;
+    }
+
+    //names[index] = Console.ReadLine();
+    //index++;
+    Console.WriteLine("Do you want to ener another name, enter: Y or N");
+    answer = Console.ReadLine().ToUpper();
+
+}
+while (answer != "N");
+
+//print
+for (int i = 0; i < index; i++)
+{
+    Console.WriteLine(names[i]);
+}
+
+
 
 
 #endregion
