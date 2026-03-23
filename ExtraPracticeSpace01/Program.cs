@@ -272,26 +272,102 @@ while (!isValid7);
 //  - how many are odd
 //  - the total sum
 
-//Do not use an array in this task.- [ ] **Task 8: Sum of Numbers**  
-//Ask the user to enter a number. Calculate and print the sum of all numbers from `1` to that number.
-
-//- [ ] **Task 9: Multiplication Table**  
-//Ask the user to enter a number. Print the multiplication table for that number from `1` to `10`.
-
-//- [ ] **Task 10: Number Statistics**  
-//Ask the user to enter `5` numbers one by one. At the end, print:
-//  - how many are even
-//  - how many are odd
-//  - the total sum
-
 //Do not use an array in this task.
-
 
 #endregion
 
 #region part 3 Workspace
 
 #region task 8
+
+Console.WriteLine("=========");
+Console.WriteLine("Task 8");
+Console.WriteLine("Please enter a number, it will print the sum of all numbers from `1` to that number");
+
+bool userInput8 = int.TryParse(Console.ReadLine(), out int userIntNum8);
+bool isValid8 = userInput8 && userIntNum8 >= 1 && userIntNum8 <= 999;
+
+int sum8 = 0;
+
+if (isValid8)
+{
+    for (int i = 1; i <= userIntNum8; i++)
+    {
+        sum8 += i;
+    }
+    Console.WriteLine("The sum is: " + sum8);
+}
+else
+{
+    Console.WriteLine("Invalid Input");
+}
+
+
+#endregion
+
+#region task 9
+
+Console.WriteLine("=========");
+Console.WriteLine("Task 9");
+Console.WriteLine("Enter a number, it will print the multiplication table for that number from 1 to 10");
+
+bool userInput9 = int.TryParse(Console.ReadLine(), out int userIntNum9);
+bool isValid9 = userInput9 && userIntNum9 >= 1 && userIntNum9 <= 10;
+Console.WriteLine("=========");
+
+if (isValid9)
+{
+    for (int i = 1; i < 10; i++)
+    {
+        int result = userIntNum9 * i;
+        Console.WriteLine($"{userIntNum9} x {i} = {result}");
+    }
+}
+else
+{
+    Console.WriteLine("Invalid Input");
+}
+
+#endregion
+
+#region Task 9
+
+Console.WriteLine("========");
+Console.WriteLine("Task 10");
+Console.WriteLine("Enter 5 numbers, it will make a sum of total, sum of even, sum of odd numbers");
+int sum10 = 0;
+int evenNumbers10 = 0;
+int oddNumbers10 = 0;
+Console.WriteLine("========");
+
+for (int i = 1; i <= 5; i++)
+{
+    Console.WriteLine("Enter number: " + i);
+    bool userInput10 = int.TryParse(Console.ReadLine(), out int userIntNum10);
+    bool isValid10 = userInput10 && userIntNum10 >= 1 && userIntNum10 <= 999;
+    
+
+    if (isValid10)
+    {
+       
+        sum10 += userIntNum10;
+    }
+
+    if (userIntNum10 % 2 == 0)
+    {
+        evenNumbers10 += userIntNum10;
+    }
+    else
+    {
+        oddNumbers10 += userIntNum10;
+    }
+
+}
+Console.WriteLine("Print sum: " + sum10);
+Console.WriteLine("Print even: " + evenNumbers10);
+Console.WriteLine("Print odd: " + oddNumbers10);
+
+
 
 
 
